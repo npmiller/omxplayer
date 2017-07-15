@@ -173,7 +173,7 @@ int Keyboard::dbus_connect()
   DBusError error;
 
   dbus_error_init(&error);
-  if (!(conn = dbus_bus_get_private(DBUS_BUS_SESSION, &error))) 
+  if (!(conn = dbus_bus_get(DBUS_BUS_SESSION, &error)))
   {
     CLog::Log(LOGWARNING, "dbus_bus_get_private(): %s", error.message);
         goto fail;

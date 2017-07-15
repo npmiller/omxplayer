@@ -137,7 +137,7 @@ int OMXControl::dbus_connect(std::string& dbus_name)
   DBusError error;
 
   dbus_error_init(&error);
-  if (!(bus = dbus_bus_get_private(DBUS_BUS_SESSION, &error)))
+  if (!(bus = dbus_bus_get(DBUS_BUS_SESSION, &error)))
   {
     CLog::Log(LOGWARNING, "dbus_bus_get_private(): %s", error.message);
         goto fail;
