@@ -189,7 +189,7 @@ fail:
 
     if (conn) 
     {
-        dbus_connection_close(conn);
+        /* dbus_connection_close(conn); */
         dbus_connection_unref(conn);
         conn = NULL;
     }
@@ -202,7 +202,7 @@ void Keyboard::dbus_disconnect()
 {
     if (conn) 
     {
-        dbus_connection_close(conn);
+        /* dbus_connection_close(conn); */
         dbus_connection_unref(conn);
         conn = NULL;
     }

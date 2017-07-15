@@ -169,7 +169,7 @@ fail:
 
     if (bus)
     {
-        dbus_connection_close(bus);
+        /* dbus_connection_close(bus); */
         dbus_connection_unref(bus);
         bus = NULL;
     }
@@ -181,7 +181,7 @@ void OMXControl::dbus_disconnect()
 {
     if (bus)
     {
-        dbus_connection_close(bus);
+        /* dbus_connection_close(bus); */
         dbus_connection_unref(bus);
         bus = NULL;
     }
